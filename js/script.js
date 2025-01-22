@@ -40,10 +40,10 @@ text.addEventListener("input", (event) => {
 
 modebtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
-    if(btn.textContent === "Turn on Right Mode"){
+    if(btn.textContent === "Turn on Light Mode"){
         btn.textContent = "Turn on Dark Mode"
     } else {
-        btn.textContent = "Turn on Right Mode";
+        btn.textContent = "Turn on Light Mode";
     }
 });
 dltbtn.addEventListener("click", () => {
