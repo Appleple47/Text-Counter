@@ -12,3 +12,10 @@ Type your sentence into the gray textbox, and it will automatically count your c
 If you set your target character count, the running boy at the top will show you your progress.\
 You can switch light/dark mode by pressing the toggle button.\
 To delete your typed sentences, press the delete button.
+
+## Future Plans
+・Add a word count feature\
+・Change text color every n characters\
+・Get some feedback\
+・Add a sharing button\
+etc.
