@@ -11,27 +11,6 @@ body{
     background: #333;
     color: #ddd;
 }
-
-#modebtn {
-    background: #007BFF;
-    padding: 1rem;
-        margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
-}
-#dltbtn {
-    background: rgb(255, 0, 0);
-    padding: 1rem;
-        margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
-}
 #text {
     border: 4px;
     border-radius: 8px;
@@ -41,21 +20,20 @@ body{
     font-size: 1.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    background: #7f7f7f;
+    background: #b2b2b2;
     color: #000;
 }
-.box {
-    border: 4px;
-    border-radius: 8px;
+textarea::placeholder {
+    color: rgb(103, 103, 103); 
+    opacity: 1;
+}
+input{
+    border: solid 1px #7f7f7f;
+    color: #7f7f7f;
+    outline: 0;
     width: 60px;
-    height: 24px;
-    max-width: 100%;
-    font-size: 1.5rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background: #7f7f7f;
-    color: #000;
 }
+
 #count{
     font-size: 1.5rem;
 }
@@ -77,9 +55,24 @@ body{
     height: auto;
     left: 100%;
 }
-input{
-    border: solid 1px #7f7f7f;
-    color: #7f7f7f;
-    outline: 0;
-    width: 60px;
+
+#modebtn {
+    background: #007BFF;
+    padding: 1rem;
+        margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+#dltbtn {
+    background: rgb(255, 0, 0);
+    padding: 1rem;
+        margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
 }

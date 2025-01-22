@@ -4,6 +4,7 @@ const count = document.querySelector("#count");
 const Input = document.getElementById("Input");
 const bar = document.querySelector("#bar"); 
 
+text.placeholder = "Type your sentence here.";
 Input.addEventListener("input", (event) => {
     const maxInput = Input.value;
     const length = text.value.length;
@@ -25,12 +26,16 @@ text.addEventListener("input", (event) => {
     console.log("Current value:", value);
     const percentage = Math.min((length / maxInput) * 100, 100);
     bar.style.width = `${percentage}%`;
+    if (text.value === "") {
+        text.placeholder = "Type your sentence here.";
+    } else {
+        text.placeholder = "";
+    }
     if (length >= maxInput) {
         count.classList.add("alert");
     } else {
         count.classList.remove("alert");
     }
-    
 });
 
 modebtn.addEventListener("click", () => {
@@ -42,14 +47,14 @@ modebtn.addEventListener("click", () => {
     }
 });
 dltbtn.addEventListener("click", () => {
-    var result = window.confirm("入力した文章を削除します. 元に戻す事はできません. ");
+    var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
-        text.value = ""; // テキストを削除
+        text.value = "";
         count.textContent = 0;
         percentage = 0;
         bar.style.width = `${percentage}%`;
         setTimeout(() => {
-            window.alert("文章を削除しました."); // 少し遅れてアラートを表示
-        }, 50); // 0.05秒後にアラートを表示
+            window.alert("The entered text will be deleted. This action cannot be undone.");
+        }, 50);
     }
 });
