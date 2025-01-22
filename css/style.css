@@ -1,0 +1,85 @@
+body{
+    text-align: center;
+    padding: 2rem;
+    transition: .5s;
+}
+.dark-theme {
+    background: #000;
+    color : #ddd;
+}
+.dark-theme #text {
+    background: #333;
+    color: #ddd;
+}
+
+#modebtn {
+    background: #007BFF;
+    padding: 1rem;
+        margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+#dltbtn {
+    background: rgb(255, 0, 0);
+    padding: 1rem;
+        margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+#text {
+    border: 4px;
+    border-radius: 8px;
+    width: 600px;
+    height: 240px;
+    max-width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #7f7f7f;
+    color: #000;
+}
+.box {
+    border: 4px;
+    border-radius: 8px;
+    width: 60px;
+    height: 24px;
+    max-width: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #7f7f7f;
+    color: #000;
+}
+#count{
+    font-size: 1.5rem;
+}
+.alert{
+    color: #f66;
+}
+
+#bar { 
+    background-color: rgb(127, 215, 242);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    transition: width 0.3s ease;
+}
+.icon {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    left: 100%;
+}
+input{
+    border: solid 1px #7f7f7f;
+    color: #7f7f7f;
+    outline: 0;
+    width: 60px;
+}
