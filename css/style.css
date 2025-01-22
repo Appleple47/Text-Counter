@@ -41,6 +41,11 @@ input{
     color: #f66;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+
 #bar { 
     background-color: rgb(127, 215, 242);
     position: fixed;
@@ -56,7 +61,7 @@ input{
     left: 100%;
 }
 
-#modebtn {
+#togglebtn {
     background: #007BFF;
     padding: 1rem;
         margin-bottom: 2rem;
@@ -66,8 +71,18 @@ input{
     border: 0;
     cursor: pointer;
 }
-#dltbtn {
+#deletebtn {
     background: rgb(255, 0, 0);
+    padding: 1rem;
+        margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
+#copybtn {
+    background: rgb(22, 161, 32);
     padding: 1rem;
         margin-bottom: 2rem;
     font-size: 1rem;

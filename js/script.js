@@ -38,7 +38,7 @@ text.addEventListener("input", (event) => {
     }
 });
 
-modebtn.addEventListener("click", () => {
+togglebtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
     if(btn.textContent === "Turn on Light Mode"){
         btn.textContent = "Turn on Dark Mode"
@@ -46,7 +46,7 @@ modebtn.addEventListener("click", () => {
         btn.textContent = "Turn on Light Mode";
     }
 });
-dltbtn.addEventListener("click", () => {
+deletebtn.addEventListener("click", () => {
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
         text.value = "";
@@ -54,7 +54,18 @@ dltbtn.addEventListener("click", () => {
         percentage = 0;
         bar.style.width = `${percentage}%`;
         setTimeout(() => {
-            window.alert("The entered text will be deleted. This action cannot be undone.");
+            window.alert("Your text has been successfully deleted.");
         }, 50);
     }
+});
+
+copybtn.addEventListener("click", () => {
+
+    navigator.clipboard.writeText(text.value)
+        .then(() => {
+            alert("Text copied to clipboard!");
+        })
+        .catch((error) => {
+            console.error("Failed to copy text: ", error);
+        });
 });
