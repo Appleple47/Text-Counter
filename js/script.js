@@ -1,6 +1,8 @@
 const btn = document.querySelector("#btn");
 const text = document.querySelector("#text");
-const count = document.querySelector("#count");
+const countchar = document.querySelector("#countchar");
+const countword = document.querySelector("#countword");
+const countsent = document.querySelector("#countsent");
 const Input = document.getElementById("Input");
 const bar = document.querySelector("#bar"); 
 
@@ -12,29 +14,36 @@ Input.addEventListener("input", (event) => {
     bar.style.width = `${percentage}%`;
     console.log(`${maxInput}`)
     if (length >= maxInput) {
-        count.classList.add("alert");
+        countchar.classList.add("alert");
     } else {
-        count.classList.remove("alert");
+        countchar.classList.remove("alert");
     }
+    const spaces = text.value.match(/ /g);
+    countchar.textContent = length - (spaces ? spaces.length : 0);
 });
 
 text.addEventListener("input", (event) => {
     const maxInput = Input.value;
     const value = event.target.value;
     const length = text.value.length;
-    count.textContent = length;
+    const spaces = text.value.match(/ /g);
+    countchar.textContent = length - (spaces ? spaces.length : 0);
     console.log("Current value:", value);
     const percentage = Math.min((length / maxInput) * 100, 100);
     bar.style.width = `${percentage}%`;
+    const sentences = text.value.match(/[。\.!?！？]/g);
+    countsent.textContent = sentences ? sentences.length : 0;
+    console.log(`${sentences}`);
+    console.log(`${countsent}`);
     if (text.value === "") {
         text.placeholder = "Type your sentence here.";
     } else {
         text.placeholder = "";
     }
     if (length >= maxInput) {
-        count.classList.add("alert");
+        countchar.classList.add("alert");
     } else {
-        count.classList.remove("alert");
+        countchar.classList.remove("alert");
     }
 });
 
@@ -50,9 +59,10 @@ deletebtn.addEventListener("click", () => {
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
         text.value = "";
-        count.textContent = 0;
+        countchar.textContent = 0;
         percentage = 0;
         bar.style.width = `${percentage}%`;
+        countsent.textContent = 0;
         setTimeout(() => {
             window.alert("Your text has been successfully deleted.");
         }, 50);

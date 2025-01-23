@@ -44,7 +44,13 @@ input{
     font-size: 0.6rem;
     color: #7f7f7f;
 }
-#count{
+#countchar{
+    font-size: 1.5rem;
+}
+#countword{
+    font-size: 1.5rem;
+}
+#countsent{
     font-size: 1.5rem;
 }
 .alert{
