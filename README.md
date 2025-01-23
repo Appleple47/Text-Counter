@@ -16,11 +16,11 @@ You can switch light/dark mode by pressing the toggle button.\
 To delete your typed sentences, press the delete button.
 
 ## Future Plans
-・Add a word count feature\
+・Add a word and sentence count feature\
 ・Change text color every n characters\
-・Get some feedback\
 ・Add a sharing button\
-etc.
+・Get some feedback\
+  etc.
 
 ## Reference
 Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative
