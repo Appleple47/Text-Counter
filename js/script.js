@@ -5,6 +5,19 @@ const Input = document.getElementById("Input");
 const bar = document.querySelector("#bar"); 
 
 text.placeholder = "Type your sentence here.";
+fetch('/env.json')
+    .then(response => response.json())
+    .then(env => {
+        const GA_TRACKING_ID = env.GA_TRACKING_ID;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', GA_TRACKING_ID);
+    })
+    .catch(error => console.error('Error loading environment variables:', error));
 Input.addEventListener("input", (event) => {
     const maxInput = Input.value;
     const length = text.value.length;

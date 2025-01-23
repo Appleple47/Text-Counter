@@ -33,7 +33,17 @@ input{
     outline: 0;
     width: 60px;
 }
-
+#anounce {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px;
+    border-radius: 8px;
+    max-width: 100%;
+    font-size: 0.6rem;
+    color: #7f7f7f;
+}
 #count{
     font-size: 1.5rem;
 }
