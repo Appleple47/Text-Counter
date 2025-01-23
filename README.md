@@ -1,4 +1,6 @@
 # Text Counter
+Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.
+
 ## About
 On the website, you can count the length of your sentences.\
 This repository is for my first website.\
@@ -19,3 +21,6 @@ To delete your typed sentences, press the delete button.
 ・Get some feedback\
 ・Add a sharing button\
 etc.
+
+## Reference
+Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative
