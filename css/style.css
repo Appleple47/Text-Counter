@@ -1,6 +1,6 @@
 body{
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     transition: .5s;
 }
 .dark-theme {
@@ -33,6 +33,14 @@ input{
     outline: 0;
     width: 60px;
 }
+select {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: solid 1px #7f7f7f;
+    color: #7f7f7f;
+    cursor: pointer;
+}
 #anounce {
     position: fixed;
     bottom: 0;
@@ -60,7 +68,7 @@ input{
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
-  }
+}
 
 #bar { 
     background-color: rgb(127, 215, 242);

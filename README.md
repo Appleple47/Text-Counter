@@ -1,5 +1,6 @@
 # Text Counter
 Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.
+Sorry, the word and sentence counters aren't working right now, but I’m working on fixing them. (25 Jan 2025)
 
 ## About
 On the website, you can count the length of your sentences.\
@@ -17,8 +18,8 @@ To delete your typed sentences, press the delete button.
 
 ## Future Plans
 ・Add a word and sentence count feature (completed on 24 Jan 2025)\
-・Change text color every n characters\
-・Allow switching target count type\
+・Allow switching target count type(competed on 25 Jan 2025)\
+・Activate word and sentence counters\
 ・Add a sharing button\
 ・Get some feedback\
   etc.

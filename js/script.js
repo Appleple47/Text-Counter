@@ -4,30 +4,35 @@ const countchar = document.querySelector("#countchar");
 const countword = document.querySelector("#countword");
 const countsent = document.querySelector("#countsent");
 const Input = document.getElementById("Input");
-const bar = document.querySelector("#bar"); 
+const bar = document.querySelector("#bar");
+const selectBox = document.querySelector("#Type");
+const tarType = document.querySelector("#TarType");
 
 text.placeholder = "Type your sentence here.";
 Input.addEventListener("input", (event) => {
-    const maxInput = Input.value;
-    const length = text.value.length;
-    const percentage = Math.min((length / maxInput) * 100, 100);
-    bar.style.width = `${percentage}%`;
-    console.log(`${maxInput}`)
-    if (length >= maxInput) {
-        countchar.classList.add("alert");
-    } else {
-        countchar.classList.remove("alert");
+    if(tarType.textContent === `character(s)`) {
+        const maxInput = Input.value;
+        const charlen = text.value.length;
+        const percentage = Math.min((charlen / maxInput) * 100, 100);
+        if (charlen >= maxInput) {
+            countchar.classList.add("alert");
+        } else {
+            countchar.classList.remove("alert");
+        }
     }
+
+    bar.style.width = `${percentage}%`;
+    console.log(`${maxInput}`)   
     const spaces = text.value.match(/ /g);
-    countchar.textContent = length - (spaces ? spaces.length : 0);
+    countchar.textContent = charlen - (spaces ? spaces.length : 0);
 });
 
 text.addEventListener("input", (event) => {
     const maxInput = Input.value;
     const value = event.target.value;
-    const length = text.value.length;
+    const charlen = text.value.length;
     const spaces = text.value.match(/ /g);
-    countchar.textContent = length - (spaces ? spaces.length : 0);
+    countchar.textContent = charlen - (spaces ? spaces.length : 0);
     const words = text.value.trim().split(/\s+/);
     const wordCount = words[0] === "" ? 0 : words.length;
     const sentences = text.value.match(/[。\.!?！？]/g);
@@ -35,7 +40,7 @@ text.addEventListener("input", (event) => {
     countword.textContent = wordCount;
     console.log(`countword is ${countword}`);
     console.log("Current value:", value);
-    const percentage = Math.min((length / maxInput) * 100, 100);
+    const percentage = Math.min((charlen / maxInput) * 100, 100);
     bar.style.width = `${percentage}%`;
     console.log(`countsent is ${countsent}`);
     console.log(`spaces is ${spaces}`);
@@ -44,7 +49,7 @@ text.addEventListener("input", (event) => {
     } else {
         text.placeholder = "";
     }
-    if (length >= maxInput) {
+    if (charlen >= maxInput) {
         countchar.classList.add("alert");
     } else {
         countchar.classList.remove("alert");
@@ -83,4 +88,20 @@ copybtn.addEventListener("click", () => {
         .catch((error) => {
             console.error("Failed to copy text: ", error);
         });
+});
+
+selectBox.addEventListener("change", () => {
+    tarType.textContent = selectBox.value;
+    if(tarType.textContent === `character(s)`) {
+        console.log(`char`);
+        Input.value = 140;
+    }
+    if(tarType.textContent === `word(s)`) {
+        console.log(`word`);
+        Input.value = 50;
+    }
+    if(tarType.textContent === `sentence(s)`) {
+        console.log(`sent`);
+        Input.value = 10;
+    }
 });

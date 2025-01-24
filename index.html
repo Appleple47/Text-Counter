@@ -35,8 +35,14 @@
             Currently <span id = "countsent">0</span> sentence(s)
         </p>
         <p>
-            Set your target character count: <input type="number" min="1" id="Input" value = "50"/> character(s)
+            Set your target 
+            <select name="TargetType" id = "Type"> 
+                <option value="character(s)">character</option>
+                <option value="word(s)">word</option>
+                <option value="sentence(s)">sentence</option> 
+            </select> count: <input type="number" min="1" id="Input" value = "140"/>  <span id = "TarType">chracter(s)</span>
         </p>
+
         <br> </br>
         <button id="togglebtn">
             Turn on Dark Mode
