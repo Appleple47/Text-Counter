@@ -28,13 +28,17 @@ text.addEventListener("input", (event) => {
     const length = text.value.length;
     const spaces = text.value.match(/ /g);
     countchar.textContent = length - (spaces ? spaces.length : 0);
+    const words = text.value.trim().split(/\s+/);
+    const wordCount = words[0] === "" ? 0 : words.length;
+    const sentences = text.value.match(/[。\.!?！？]/g);
+    countsent.textContent = sentences ? sentences.length : 0;
+    countword.textContent = wordCount;
+    console.log(`countword is ${countword}`);
     console.log("Current value:", value);
     const percentage = Math.min((length / maxInput) * 100, 100);
     bar.style.width = `${percentage}%`;
-    const sentences = text.value.match(/[。\.!?！？]/g);
-    countsent.textContent = sentences ? sentences.length : 0;
-    console.log(`${sentences}`);
-    console.log(`${countsent}`);
+    console.log(`countsent is ${countsent}`);
+    console.log(`spaces is ${spaces}`);
     if (text.value === "") {
         text.placeholder = "Type your sentence here.";
     } else {
