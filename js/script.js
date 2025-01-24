@@ -64,9 +64,10 @@ deletebtn.addEventListener("click", () => {
     if (result) {
         text.value = "";
         countchar.textContent = 0;
+        countword.textContent = 0;
+        countsent.textContent = 0;
         percentage = 0;
         bar.style.width = `${percentage}%`;
-        countsent.textContent = 0;
         setTimeout(() => {
             window.alert("Your text has been successfully deleted.");
         }, 50);
