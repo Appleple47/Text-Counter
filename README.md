@@ -1,5 +1,5 @@
 # Text Counter
-Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.
+Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.\
 Sorry, the word and sentence counters aren't working right now, but I’m working on fixing them. (25 Jan 2025)
 
 ## About

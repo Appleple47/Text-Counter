@@ -10,15 +10,13 @@ const tarType = document.querySelector("#TarType");
 
 text.placeholder = "Type your sentence here.";
 Input.addEventListener("input", (event) => {
-    if(tarType.textContent === `character(s)`) {
-        const maxInput = Input.value;
-        const charlen = text.value.length;
-        const percentage = Math.min((charlen / maxInput) * 100, 100);
-        if (charlen >= maxInput) {
-            countchar.classList.add("alert");
-        } else {
-            countchar.classList.remove("alert");
-        }
+    const maxInput = Input.value;
+    const charlen = text.value.length;
+    const percentage = Math.min((charlen / maxInput) * 100, 100);
+    if (charlen >= maxInput) {
+        countchar.classList.add("alert");
+    } else {
+        countchar.classList.remove("alert");
     }
 
     bar.style.width = `${percentage}%`;
