@@ -26,5 +26,5 @@ To delete your typed sentences, press the delete button.
 ## Reference
 Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative
 
-<img width="1470" alt="ScreeShot" src="https://github.com/user-attachments/assets/3ef832e0-c233-492a-b738-cb3c22f555b3" />
-<img width="1470" alt="ScreenShot" src="https://github.com/user-attachments/assets/c271d08d-4a94-4500-93fb-5e62f18f98b2" />
+![Sample Image](./pictures/ScreenShot1.png)
+![Sample Image](./pictures/ScreenShot2.png)
