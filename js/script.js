@@ -62,6 +62,7 @@ togglebtn.addEventListener("click", () => {
         togglebtn.textContent = "Turn on Light Mode";
     }
 });
+
 deletebtn.addEventListener("click", () => {
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {

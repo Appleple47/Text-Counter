@@ -2,15 +2,53 @@ body{
     text-align: center;
     padding: 3rem;
     transition: .5s;
+    background-image: url('../pictures/hotel-wallpaper.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
 }
 .dark-theme {
-    background: #000;
-    color : #ddd;
+    background-image: url('../pictures/hotel-wallpaper-black.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    color: #ddd;
 }
 .dark-theme #text {
     background: #333;
     color: #ddd;
 }
+.dark-theme #Type {
+    border: 4px;
+    border-radius: 4px;
+    color: #ddd;
+    border: 1.5px solid #ddd;
+}
+.dark-theme #Input {
+    border: 4px;
+    border-radius: 4px;
+    color: #ddd;
+    border: 1.5px solid #ddd;
+}
+input{
+    border: 4px;
+    border-radius: 4px;
+    border: solid 1.5px #000;
+    color: #000;
+    outline: 0;
+    width: 60px;
+}
+select {
+    padding: 0.5rem;
+    border: 4px;
+    border-radius: 4px;
+    border: solid 1.5px #000;
+    color: #000;
+    cursor: pointer;
+}
+
 #text {
     border: 4px;
     border-radius: 8px;
@@ -26,20 +64,6 @@ body{
 textarea::placeholder {
     color: rgb(103, 103, 103); 
     opacity: 1;
-}
-input{
-    border: solid 1px #7f7f7f;
-    color: #7f7f7f;
-    outline: 0;
-    width: 60px;
-}
-select {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: solid 1px #7f7f7f;
-    color: #7f7f7f;
-    cursor: pointer;
 }
 #anounce {
     position: fixed;
