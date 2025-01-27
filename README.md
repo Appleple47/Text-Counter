@@ -1,6 +1,7 @@
 # Text Counter
 Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.\
-Sorry, the word and sentence counters aren't working right now, but I’m working on fixing them. (25 Jan 2025)
+Sorry, the word and sentence counters aren't working right now, but I’m working on fixing them. (25 Jan 2025)\
+P.S.: The issue has been resolved as of 28 Jan 2025.
 
 ## About
 On the website, you can count the length of your text.\
@@ -22,7 +23,7 @@ You can switch light/dark mode by pressing the toggle button.
 ・Add a word and sentence count feature (completed on 24 Jan 2025)\
 ・Allow switching target count type (competed on 25 Jan 2025)\
 ・Add a wallpaper to the page (completed on 27 Jan 2025)\
-・Activate word and sentence counters\
+・Activate word and sentence counters (completed on Jan 2025)\
 ・Add a sharing button\
 ・Add ads, lol\
 ・Get some feedback\
