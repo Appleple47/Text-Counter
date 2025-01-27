@@ -9,60 +9,97 @@ const selectBox = document.querySelector("#Type");
 const tarType = document.querySelector("#TarType");
 
 text.placeholder = "Type your sentence here.";
-Input.addEventListener("input", (event) => {
+tarType.textContent = "character";
+// Function that renew count and progress bar
+const update = ()=> {
+    // Count characters other than spaces.
     const maxInput = Input.value;
-    const charlen = text.value.length;
-    const percentage = Math.min((charlen / maxInput) * 100, 100);
-    if (charlen >= maxInput) {
-        countchar.classList.add("alert");
-    } else {
+    const spaces = text.value.match(/ /g);
+    const cntchar = text.value.length - (spaces ? spaces.length : 0);
+    countchar.textContent = cntchar; 
+    // Count words
+    const words = text.value.trim().split(/\s+/);
+    const cntword = words[0] === "" ? 0 : words.length;
+    countword.textContent = cntword;
+    // Count sentences by finding end of sentence
+    const sentences = text.value.match(/[。\.!?！？]/g);
+    const cntsent = sentences ? sentences.length : 0;
+    countsent.textContent = cntsent;
+
+    let percentage = 0; // Init percentage
+
+    // Renew percentage and check target count
+    if(tarType.textContent === `character`){
+        percentage = Math.min((cntchar / maxInput) * 100, 100);
+        if (cntchar >= maxInput) {
+            countchar.classList.add("alert");
+        }
+    }else if(tarType.textContent === `word`){
+        percentage = Math.min((cntword / maxInput) * 100, 100);
+        if (cntword >= maxInput) {
+            countword.classList.add("alert");
+        }
+    }else if(tarType.textContent === `sentence`){ 
+        percentage = Math.min((cntsent / maxInput) * 100, 100);
+        if (cntsent >= maxInput) {
+            countsent.classList.add("alert");
+        }
+    }
+    // Check if the target count exceeds the limit
+    if(cntchar < maxInput || tarType.textContent !== `character`) {
         countchar.classList.remove("alert");
     }
-
+    if(cntword < maxInput || tarType.textContent !== `word`) {
+        countword.classList.remove("alert");
+    }
+    if(cntsent < maxInput || tarType.textContent !== `sentence`) {
+        countsent.classList.remove("alert");
+    }
     bar.style.width = `${percentage}%`;
-    console.log(`${maxInput}`)   
-    const spaces = text.value.match(/ /g);
-    countchar.textContent = charlen - (spaces ? spaces.length : 0);
-});
-
-text.addEventListener("input", (event) => {
-    const maxInput = Input.value;
-    const value = event.target.value;
-    const charlen = text.value.length;
-    const spaces = text.value.match(/ /g);
-    countchar.textContent = charlen - (spaces ? spaces.length : 0);
-    const words = text.value.trim().split(/\s+/);
-    const wordCount = words[0] === "" ? 0 : words.length;
-    const sentences = text.value.match(/[。\.!?！？]/g);
-    countsent.textContent = sentences ? sentences.length : 0;
-    countword.textContent = wordCount;
-    console.log(`countword is ${countword}`);
-    console.log("Current value:", value);
-    const percentage = Math.min((charlen / maxInput) * 100, 100);
-    bar.style.width = `${percentage}%`;
-    console.log(`countsent is ${countsent}`);
-    console.log(`spaces is ${spaces}`);
     if (text.value === "") {
         text.placeholder = "Type your sentence here.";
     } else {
         text.placeholder = "";
     }
-    if (charlen >= maxInput) {
-        countchar.classList.add("alert");
-    } else {
-        countchar.classList.remove("alert");
+}
+
+// Activate update function when user types
+text.addEventListener("input", (event) => {
+    update();
+});
+// Activate update function when change target count
+Input.addEventListener("input", (event) => {
+    update();
+});
+// Init target count when user change target type
+selectBox.addEventListener("change", () => {
+    tarType.textContent = selectBox.value;
+    if(tarType.textContent === `character`) {
+        console.log(`char`);
+        Input.value = 140;
     }
+    if(tarType.textContent === `word`) {
+        console.log(`word`);
+        Input.value = 50;
+    }
+    if(tarType.textContent === `sentence`) {
+        console.log(`sent`);
+        Input.value = 10;
+    }
+    update();
 });
 
-togglebtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-    if(togglebtn.textContent === "Turn on Light Mode"){
-        togglebtn.textContent = "Turn on Dark Mode"
-    } else {
-        togglebtn.textContent = "Turn on Light Mode";
-    }
+// Copy text to user's clipboard when user press copy button
+copybtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(text.value)
+    .then(() => {
+        alert("Text copied to clipboard!");
+    })
+    .catch((error) => {
+        console.error("Failed to copy text: ", error);
+    });
 });
-
+// Delete text and init some value
 deletebtn.addEventListener("click", () => {
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
@@ -77,30 +114,12 @@ deletebtn.addEventListener("click", () => {
         }, 50);
     }
 });
-
-copybtn.addEventListener("click", () => {
-
-    navigator.clipboard.writeText(text.value)
-        .then(() => {
-            alert("Text copied to clipboard!");
-        })
-        .catch((error) => {
-            console.error("Failed to copy text: ", error);
-        });
-});
-
-selectBox.addEventListener("change", () => {
-    tarType.textContent = selectBox.value;
-    if(tarType.textContent === `character(s)`) {
-        console.log(`char`);
-        Input.value = 140;
-    }
-    if(tarType.textContent === `word(s)`) {
-        console.log(`word`);
-        Input.value = 50;
-    }
-    if(tarType.textContent === `sentence(s)`) {
-        console.log(`sent`);
-        Input.value = 10;
+// Switch dark and light mode
+togglebtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    if(togglebtn.textContent === "Turn on Light Mode"){
+        togglebtn.textContent = "Turn on Dark Mode"
+    } else {
+        togglebtn.textContent = "Turn on Light Mode";
     }
 });
