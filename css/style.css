@@ -4,14 +4,14 @@ body{
     transition: .5s;
     background-image: url('../pictures/hotel-wallpaper.webp');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     z-index: -1;
 }
 .dark-theme {
     background-image: url('../pictures/hotel-wallpaper-black.webp');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     z-index: -1;
     color: #ddd;
