@@ -6,7 +6,7 @@ P.S.: The issue has been resolved as of 28 Jan 2025.
 ## About
 On the website, you can count the length of your text.\
 This repository is for my first website.\
-I will make an effort to use English in this repository\
+I will make an effort to use English in this repository.\
 Even if there is any strange English, please don't mind.\
 If you have any ideas to improve this website, please let me know!\
 The wallpapers are provided by [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/).\
@@ -23,7 +23,7 @@ You can switch light/dark mode by pressing the toggle button.
 ・Add a word and sentence count feature (completed on 24 Jan 2025)\
 ・Allow switching target count type (competed on 25 Jan 2025)\
 ・Add a wallpaper to the page (completed on 27 Jan 2025)\
-・Activate word and sentence counters (completed on Jan 2025)\
+・Activate word and sentence counters (completed on 28 Jan 2025)\
 ・Add a sharing button\
 ・Add ads, lol\
 ・Get some feedback\

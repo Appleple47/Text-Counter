@@ -8,28 +8,26 @@ const bar = document.querySelector("#bar");
 const selectBox = document.querySelector("#Type");
 const tarType = document.querySelector("#TarType");
 
-text.placeholder = "Type your sentence here.";
-tarType.textContent = "character";
-// Function that renew count and progress bar
-const update = ()=> {
-    // Count characters other than spaces.
-    const maxInput = Input.value;
-    const spaces = text.value.match(/ /g);
+text.placeholder = "Type your sentence here.";                          // Set a default placeholder to prevent errors
+tarType.textContent = "character";                                      // Set a default target type to prevent errors
+let percentage = 0;                                                     // Initialize percentage of user's progress
+
+const update = ()=> {                                                   // Function that renews count and progress bar
+    const maxInput = Input.value;                                       // Set target count
+    
+    const spaces = text.value.match(/ /g);                              // Count characters other than spaces.
     const cntchar = text.value.length - (spaces ? spaces.length : 0);
     countchar.textContent = cntchar; 
-    // Count words
-    const words = text.value.trim().split(/\s+/);
+
+    const words = text.value.trim().split(/\s+/);                       // Count words
     const cntword = words[0] === "" ? 0 : words.length;
     countword.textContent = cntword;
-    // Count sentences by finding end of sentence
-    const sentences = text.value.match(/[。\.!?！？]/g);
+   
+    const sentences = text.value.match(/[。\.!?！？]/g);                 // Count sentences by finding end of sentence
     const cntsent = sentences ? sentences.length : 0;
     countsent.textContent = cntsent;
 
-    let percentage = 0; // Init percentage
-
-    // Renew percentage and check target count
-    if(tarType.textContent === `character`){
+    if(tarType.textContent === `character`){                            // Renew percentage and check target count
         percentage = Math.min((cntchar / maxInput) * 100, 100);
         if (cntchar >= maxInput) {
             countchar.classList.add("alert");
@@ -45,8 +43,8 @@ const update = ()=> {
             countsent.classList.add("alert");
         }
     }
-    // Check if the target count exceeds the limit
-    if(cntchar < maxInput || tarType.textContent !== `character`) {
+    
+    if(cntchar < maxInput || tarType.textContent !== `character`) {     // Check if the target count exceeds the limit
         countchar.classList.remove("alert");
     }
     if(cntword < maxInput || tarType.textContent !== `word`) {
@@ -55,24 +53,25 @@ const update = ()=> {
     if(cntsent < maxInput || tarType.textContent !== `sentence`) {
         countsent.classList.remove("alert");
     }
-    bar.style.width = `${percentage}%`;
-    if (text.value === "") {
+
+    bar.style.width = `${percentage}%`;                                 // Renew the position of Running Man
+
+    if (text.value === "") {                                            // Display "Type your sentence here." if the text box is empty 
         text.placeholder = "Type your sentence here.";
     } else {
         text.placeholder = "";
     }
 }
 
-// Activate update function when user types
-text.addEventListener("input", (event) => {
+text.addEventListener("input", (event) => {                             // Activate update function when user types
     update();
 });
-// Activate update function when change target count
-Input.addEventListener("input", (event) => {
+
+Input.addEventListener("input", (event) => {                            // Activate update function when change target count
     update();
 });
-// Init target count when user change target type
-selectBox.addEventListener("change", () => {
+
+selectBox.addEventListener("change", () => {                            // Initialize target count when user change target type
     tarType.textContent = selectBox.value;
     if(tarType.textContent === `character`) {
         console.log(`char`);
@@ -89,8 +88,7 @@ selectBox.addEventListener("change", () => {
     update();
 });
 
-// Copy text to user's clipboard when user press copy button
-copybtn.addEventListener("click", () => {
+copybtn.addEventListener("click", () => {                               // Copy text to user's clipboard when user press copy button
     navigator.clipboard.writeText(text.value)
     .then(() => {
         alert("Text copied to clipboard!");
@@ -99,8 +97,8 @@ copybtn.addEventListener("click", () => {
         console.error("Failed to copy text: ", error);
     });
 });
-// Delete text and init some value
-deletebtn.addEventListener("click", () => {
+
+deletebtn.addEventListener("click", () => {                             // Delete text and init some value
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
         text.value = "";
@@ -109,13 +107,14 @@ deletebtn.addEventListener("click", () => {
         countsent.textContent = 0;
         percentage = 0;
         bar.style.width = `${percentage}%`;
+        update();
         setTimeout(() => {
             window.alert("Your text has been successfully deleted.");
-        }, 50);
+        }, 80);
     }
 });
-// Switch dark and light mode
-togglebtn.addEventListener("click", () => {
+
+togglebtn.addEventListener("click", () => {                             // Switch light/dark mode
     document.body.classList.toggle("dark-theme");
     if(togglebtn.textContent === "Turn on Light Mode"){
         togglebtn.textContent = "Turn on Dark Mode"
