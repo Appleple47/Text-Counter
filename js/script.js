@@ -98,6 +98,20 @@ copybtn.addEventListener("click", () => {                               // Copy 
     });
 });
 
+pastebtn.addEventListener("click", () => {                              // Paste text to the textbox from user's clipboard when user press paste button
+    navigator.clipboard.readText()
+        .then((clipboardText) => {
+            const startPos = text.selectionStart;
+            const endPos = text.selectionEnd;
+            const currentText = text.value;
+            text.value = currentText.slice(0, startPos) + clipboardText + currentText.slice(endPos);
+            text.selectionStart = text.selectionEnd = startPos + clipboardText.length;
+            update();
+        })
+        .catch((error) => {
+            console.error("Failed to paste clipboard content:", error);
+        });
+});
 deletebtn.addEventListener("click", () => {                             // Delete text and init some value
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
