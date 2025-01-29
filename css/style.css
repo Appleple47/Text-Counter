@@ -1,8 +1,8 @@
-body{
+body {
+    background-image: url('../pictures/hotel-wallpaper.webp');
     text-align: center;
     padding: 3rem;
-    transition: .5s;
-    background-image: url('../pictures/hotel-wallpaper.webp');
+    transition: 0.5s;
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
@@ -10,43 +10,28 @@ body{
 }
 .dark-theme {
     background-image: url('../pictures/hotel-wallpaper-black.webp');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    z-index: -1;
     color: #ddd;
 }
 .dark-theme #text {
     background: #333;
-    color: #ddd;
 }
-.dark-theme #Type {
-    border: 4px;
-    border-radius: 4px;
-    color: #ddd;
-    border: 1.5px solid #ddd;
-}
+.dark-theme #Type,
 .dark-theme #Input {
-    border: 4px;
     border-radius: 4px;
-    color: #ddd;
     border: 1.5px solid #ddd;
 }
 
-input{
-    border: 4px;
+input, select {
     border-radius: 4px;
     border: solid 1.5px #000;
     color: #000;
+}
+input {
     outline: 0;
     width: 60px;
 }
 select {
     padding: 0.5rem;
-    border: 4px;
-    border-radius: 4px;
-    border: solid 1.5px #000;
-    color: #000;
     cursor: pointer;
 }
 
@@ -77,13 +62,9 @@ textarea::placeholder {
     font-size: 0.6rem;
     color: #7f7f7f;
 }
-#countchar{
-    font-size: 1.5rem;
-}
-#countword{
-    font-size: 1.5rem;
-}
-#countsent{
+#countchar,
+#countword,
+#countsent {
     font-size: 1.5rem;
 }
 .alert{
@@ -110,8 +91,7 @@ input[type=number]::-webkit-outer-spin-button {
     left: 100%;
 }
 
-#copybtn {
-    background: rgb(22, 161, 32);
+button {
     padding: 1rem;
     margin-bottom: 2rem;
     font-size: 1rem;
@@ -119,34 +99,16 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 8px;
     border: 0;
     cursor: pointer;
+}
+#copybtn {
+    background: rgb(22, 161, 32);
 }
 #pastebtn {
     background: #ff7043;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
 }
 #deletebtn {
     background: rgb(255, 0, 0);
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
 }
 #togglebtn {
     background: #007BFF;
-    padding: 1rem;
-        margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
 }
