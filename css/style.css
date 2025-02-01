@@ -14,11 +14,13 @@ body {
 }
 .dark-theme #text {
     background: #333;
+    color: #ddd;
 }
 .dark-theme #Type,
 .dark-theme #Input {
     border-radius: 4px;
     border: 1.5px solid #ddd;
+    color: #ddd;
 }
 
 input, select {
