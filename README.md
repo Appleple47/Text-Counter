@@ -25,7 +25,7 @@ You can switch light/dark mode by pressing the toggle button.
 ・Add a wallpaper to the page (completed on 27 Jan 2025)\
 ・Activate word and sentence counters (completed on 28 Jan 2025)\
 ・Add a sharing button\
-・Add a paste button\ (completed on 28 Jan 2025)
+・Add a paste button (completed on 28 Jan 2025) \
 ・Add ads, lol\
 ・Get some feedback\
   etc.
