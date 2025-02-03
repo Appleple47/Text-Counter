@@ -62,15 +62,11 @@ const update = ()=> {                                                   // Funct
     }
 }
 
-text.addEventListener("input", (event) => {                             // Activate update function when user types
-    update();
+[text, Input].forEach(element => {                                      // Activate update function when user types or changeas target count
+    element.addEventListener("input", update);
 });
 
-Input.addEventListener("input", (event) => {                            // Activate update function when change target count
-    update();
-});
-
-selectBox.addEventListener("change", () => {                            // Initialize target count when user change target type
+selectBox.addEventListener("change", () => {                            // Initialize target count when user changes target type
     tarType.textContent = selectBox.value;
     if(tarType.textContent === `character`) {
         console.log(`char`);
