@@ -11,7 +11,6 @@ const tarType = document.querySelector("#TarType");
 text.placeholder = "Type your sentence here.";                          // Set a default placeholder to prevent errors
 tarType.textContent = "character";                                      // Set a default target type to prevent errors
 let percentage = 0;                                                     // Initialize percentage of user's progress
-
 const update = ()=> {                                                   // Function that renews count and progress bar
     const maxInput = Input.value;                                       // Set target count
     
@@ -112,15 +111,11 @@ pastebtn.addEventListener("click", () => {                              // Paste
             console.error("Failed to paste clipboard content:", error);
         });
 });
+
 deletebtn.addEventListener("click", () => {                             // Delete text and init some value
     var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
     if (result) {
         text.value = "";
-        countchar.textContent = 0;
-        countword.textContent = 0;
-        countsent.textContent = 0;
-        percentage = 0;
-        bar.style.width = `${percentage}%`;
         update();
         setTimeout(() => {
             window.alert("Your text has been successfully deleted.");
