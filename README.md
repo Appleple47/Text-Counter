@@ -27,6 +27,7 @@ You can switch light/dark mode by pressing the toggle button.
 ・Add a sharing button\
 ・Add a paste button (completed on 28 Jan 2025) \
 ・Add ads, lol\
+・Utilize Google Analytics Data to improve the Website\
 ・Get some feedback\
   etc.
 
