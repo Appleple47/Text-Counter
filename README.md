@@ -33,6 +33,6 @@ You can switch light/dark mode by pressing the toggle button.
 
 ## Reference and Citation
 [1] Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative\
-[2] https://www.toptal.com/designers/subtlepatterns/ \
+[2] Toptal, https://www.toptal.com/designers/subtlepatterns/ \
 ![Sample Image](./pictures/ScreenShot1.png)
 ![Sample Image](./pictures/ScreenShot2.png)
