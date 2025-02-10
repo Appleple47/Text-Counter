@@ -1,8 +1,5 @@
 # Text Counter
-[Click here to visit the website.](https://appleple47.github.io/Text-Counter/)\
-Sorry, the word and sentence counters aren't working right now, but I’m working on fixing them. (25 Jan 2025)\
-P.S.: The issue has been resolved as of 28 Jan 2025.
-
+Click [here](https://appleple47.github.io/Text-Counter/) to visit the website.
 ## About
 On the website, you can count the length of your text.\
 This repository is for my first website.\
