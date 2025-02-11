@@ -109,13 +109,18 @@ pastebtn.addEventListener("click", () => {                              // Paste
 });
 
 deletebtn.addEventListener("click", () => {                             // Delete text and init some value
-    var result = window.confirm("The entered text will be deleted. This action cannot be undone.");
-    if (result) {
-        text.value = "";
-        update();
-        setTimeout(() => {
-            window.alert("Your text has been successfully deleted.");
-        }, 80);
+    try{
+        const result = window.confirm("The entered text will be deleted. This action cannot be undone.");
+        if (result) {
+            text.value = "";
+            update();
+            setTimeout(() => {
+                window.alert("Your text has been successfully deleted.");
+            }, 80);
+        }
+    } catch (error){
+        console.error("Error:", error);
+        window.alert("An error occurred: " + error.message);
     }
 });
 
