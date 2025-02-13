@@ -15,7 +15,7 @@ If you set your target type of count and target count, the running boy at the to
 The copy button lets you copy your text to the clipboard.\
 The paste button allows you to insert text from your clipboard.\
 To delete your typed sentences, press the delete button.\
-You can switch light/dark mode by pressing the toggle button.
+You can switch between light and dark mode by pressing the toggle button.
 
 ## Future Plans
 ・Add a word and sentence count feature (completed on 24 Jan 2025)\
