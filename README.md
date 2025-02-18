@@ -1,7 +1,7 @@
 # Text Counter
 Click [here](https://appleple47.github.io/Text-Counter/) to visit the website and count your text.
 ## About
-On the website, you can count the length of your text.\
+On my website, you can count the length of your text.\
 This repository is for my first website.\
 I will make an effort to use English in this repository.\
 Even if there is any strange English, please don't mind.\
