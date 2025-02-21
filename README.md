@@ -3,7 +3,7 @@ Click [here](https://appleple47.github.io/Text-Counter/) to visit my website and
 ## About
 On my website, you can count the length of your text.\
 This repository is for my first website.\
-I will make an effort to use English in this repository.\
+I will make an effort to use English in this repository and on my website.\
 Even if there is any strange English, please don't mind.\
 If you have any ideas to improve this website, please let me know!\
 Wallpapers are provided by [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/).\
