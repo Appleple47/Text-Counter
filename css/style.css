@@ -70,7 +70,7 @@ textarea::placeholder {
     font-size: 1.5rem;
 }
 .alert{
-    color: #f66;
+    color: #ff6666;
 }
 
 input[type=number]::-webkit-inner-spin-button,
