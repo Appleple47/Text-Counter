@@ -36,7 +36,7 @@ const update = ()=> {                                                   // Funct
         if (cntword >= maxInput) {
             countword.classList.add("alert");
         }
-    }else if(tarType.textContent === `sentence`){ 
+    }else{ 
         percentage = Math.min((cntsent / maxInput) * 100, 100);
         if (cntsent >= maxInput) {
             countsent.classList.add("alert");
