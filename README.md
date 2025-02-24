@@ -24,7 +24,7 @@ You can switch between light and dark mode by pressing the toggle button.
 ・Activate word and sentence counters (completed on 28 Jan 2025)\
 ・Add a sharing button\
 ・Add a paste button (completed on 28 Jan 2025) \
-・Make the site show up in search results!\
+・Make my site show up in search results!\
 ・Add ads, lol\
 ・Utilize Google Analytics Data to improve the Website\
 ・Get some feedback\
