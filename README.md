@@ -26,7 +26,7 @@ You can switch between light and dark mode by pressing the toggle button.
 ・Add a paste button (completed on 28 Jan 2025) \
 ・Make my site show up in search results!\
 ・Add ads, lol\
-・Utilize Google Analytics Data to improve the Website\
+・Utilize Google Analytics Data to improve my Website\
 ・Get some feedback\
   etc.
 
