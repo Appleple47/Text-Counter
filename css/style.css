@@ -50,7 +50,7 @@ select {
     color: #000;
 }
 textarea::placeholder {
-    color: rgb(103, 103, 103); 
+    color: #676767; 
     opacity: 1;
 }
 #anounce {
