@@ -18,17 +18,20 @@ To delete your typed sentences, press the delete button.\
 You can switch between light and dark mode by pressing the toggle button.
 
 ## Future Plans
-・Add a word and sentence count feature (completed on 24 Jan 2025)\
-・Allow switching target count type (competed on 25 Jan 2025)\
-・Add a wallpaper to the page (completed on 27 Jan 2025)\
-・Activate word and sentence counters (completed on 28 Jan 2025)\
 ・Add a sharing button\
-・Add a paste button (completed on 28 Jan 2025) \
 ・Make my site show up in search results!\
 ・Add ads, lol\
 ・Utilize Google Analytics Data to improve my site\
 ・Get some feedback\
   etc.
+
+## Completed Tasks
+・Add a word and sentence count feature (completed on 24 Jan 2025)\
+・Allow switching target count type (competed on 25 Jan 2025)\
+・Add a wallpaper to the page (completed on 27 Jan 2025)\
+・Activate word and sentence counters (completed on 28 Jan 2025)\
+・Add a paste button (completed on 28 Jan 2025) \
+
 
 ## Reference(s) and Citation(s)
 [1] Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative\
