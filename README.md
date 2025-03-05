@@ -36,5 +36,6 @@ You can switch between light and dark mode by pressing the toggle button.
 ## Reference(s) and Citation(s)
 [1] Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative\
 [2] Toptal>Utilities>Subtle Patterns https://www.toptal.com/designers/subtlepatterns/ \
+[3] [ChatGPT](https://chatgpt.com/g/g-8sPlJ64Gn-tiyatutogpt)\
 ![Sample Image](./pictures/ScreenShot1.png)
 ![Sample Image](./pictures/ScreenShot2.png)
