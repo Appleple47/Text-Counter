@@ -20,7 +20,7 @@ You can switch between light and dark mode by pressing the toggle button.
 ## Future Plans
 ・Add a sharing button\
 ・Make my site show up in search results!\
-・Add ads, lol\
+・Add ads\
 ・Utilize Google Analytics Data to improve my site\
 ・Get some feedback\
   etc.
