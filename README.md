@@ -21,7 +21,7 @@ You can switch between light and dark mode by pressing the toggle button.
 ・Add a sharing button\
 ・Make my website show up in search results!\
 ・Add an ad\
-・Utilize Google Analytics Data to improve my site\
+・Utilize Google Analytics Data to improve my website\
 ・Get some feedback\
   etc.
 
