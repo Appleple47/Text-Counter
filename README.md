@@ -15,7 +15,7 @@ If you set your target type of count and target count, Running Man at the top of
 The copy button lets you copy your text to the clipboard.\
 The paste button allows you to insert text from your clipboard.\
 To delete your typed sentences, press the delete button.\
-You can switch between light and dark mode by pressing the toggle button.
+You can switch between light mode and dark mode by pressing the toggle button.
 
 ## Future Plans
 ・Add a sharing button\
