@@ -31,7 +31,7 @@ You can switch between light mode and dark mode by pressing the toggle button.
 ・Allow switching target count type (competed on 25 Jan 2025)\
 ・Add a wallpaper to the page (completed on 27 Jan 2025)\
 ・Activate word and sentence counters (completed on 28 Jan 2025)\
-・Add a paste button (completed on 28 Jan 2025) \
+・Add a paste button (completed on 28 Jan 2025)\
 
 
 ## Reference(s) and Citation(s)
