@@ -1,5 +1,6 @@
 # Text Counter
 Click [here](https://appleple47.github.io/Text-Counter/) to visit my website and count your text.
+
 ## About
 On my website, you can get the amount of your characters, words and sentences.\
 This repository is for my first website.\
@@ -32,7 +33,6 @@ You can switch between light mode and dark mode by pressing the toggle button.
 ・Add a wallpaper to the page (completed on 27 Jan 2025)\
 ・Activate word and sentence counters (completed on 28 Jan 2025)\
 ・Add a paste button (completed on 28 Jan 2025)\
-
 
 ## Reference(s) and Citation(s)
 [1] Mana, 2023, "[1冊ですべて身につくJavaScript入門講座](https://www.sbcr.jp/product/4815615758/)", SB Creative\
