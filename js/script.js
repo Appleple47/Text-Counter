@@ -76,7 +76,7 @@ selectBox.addEventListener("change", () => {                            // Initi
         console.log(`word`);
         Input.value = 50;
     }
-    if(tarType.textContent === `sentence`) {
+    else{
         console.log(`sent`);
         Input.value = 10;
     }
