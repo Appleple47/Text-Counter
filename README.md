@@ -20,6 +20,7 @@ You can switch between light mode and dark mode by pressing the toggle button.
 
 ## Future Plans
 ・Add a sharing button\
+・Add other symbol of end of sentence.\
 ・Make my website show up in search results.\
 ・Add an ad\
 ・Decorate my website\
