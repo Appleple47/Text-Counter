@@ -22,6 +22,7 @@ You can switch between light mode and dark mode by pressing the toggle button.
 ・Add a sharing button\
 ・Add other symbol of end of sentence\
 ・Make my website show up in search results\
+・Reach over 1,000 visits on my Website\
 ・Add an ad\
 ・Decorate my website\
 ・Utilize Google Analytics Data to improve my website\
