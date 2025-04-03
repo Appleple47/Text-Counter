@@ -53,17 +53,6 @@ textarea::placeholder {
     color: #676767; 
     opacity: 1;
 }
-#anounce {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 4px;
-    border-radius: 8px;
-    max-width: 100%;
-    font-size: 0.6rem;
-    color: #7f7f7f;
-}
 #countchar,
 #countword,
 #countsent {
@@ -71,46 +60,4 @@ textarea::placeholder {
 }
 .alert{
     color: #ff6666;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    opacity: 1;
-}
-
-#bar { 
-    background-color: #6FD7E2;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 50px;
-    transition: width 0.3s ease;
-}
-.icon {
-    position: absolute;
-    width: 50px;
-    height: auto;
-    left: 100%;
-}
-
-button {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
-}
-#copybtn {
-    background:#16A120;
-}
-#pastebtn {
-    background: #ff7043;
-}
-#deletebtn {
-    background: #FF0000;
-}
-#togglebtn {
-    background: #007BFF;
 }
