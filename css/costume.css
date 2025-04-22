@@ -1,3 +1,18 @@
+h1 {
+    padding: 0.2em;
+    position: relative;
+    background: #71b8ff;
+    box-shadow: 0px 0px 0px 5px #71b8ff;
+    border: dashed 2px white;
+    color: black;
+}
+.dark-theme h1 {
+    background: #333333; /* 暗い背景色 */
+    box-shadow: 0px 0px 0px 5px #333333; /* 背景と同じ色で統一感を */
+    border: dashed 2px #aaaaaa; /* やや明るいグレーのボーダー */
+    color: #ffffff; /* 明るい文字色 */
+}
+
 
 #anounce {
     position: fixed;
