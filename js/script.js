@@ -16,15 +16,15 @@ const update = ()=> {                                                   // Funct
     
     const spaces = text.value.match(/ /g);                              // Count characters other than spaces.
     const cntchar = text.value.length - (spaces ? spaces.length : 0);
-    countchar.textContent = cntchar; 
+    countchar.textContent = cntchar.toLocaleString(); 
 
     const words = text.value.trim().split(/\s+/);                       // Count words
     const cntword = words[0] === "" ? 0 : words.length;
-    countword.textContent = cntword;
-   
+    countword.textContent = cntword.toLocaleString();
+
     const sentences = text.value.match(/[。\.!?！？]/g);                 // Count sentences by finding end of sentence
     const cntsent = sentences ? sentences.length : 0;
-    countsent.textContent = cntsent;
+    countsent.textContent = cntsent.toLocaleString();
 
     if(tarType.textContent === `character`){                            // Renew percentage and check target count
         percentage = Math.min((cntchar / maxInput) * 100, 100);
