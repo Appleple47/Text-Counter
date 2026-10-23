@@ -82,3 +82,12 @@ selectBox.addEventListener("change", () => {                            // Initi
     }
     update();
 });
+
+window.addEventListener("pageshow", () => {
+    const restore = () => {
+        tarType.textContent = selectBox.value;
+        update();
+    };
+    restore();
+    setTimeout(restore, 0);
+})
