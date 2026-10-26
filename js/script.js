@@ -9,7 +9,9 @@ const selectBox = document.querySelector("#Type");
 const tarType = document.querySelector("#TarType");
 
 text.placeholder = "Type your sentence here.";                          // Set a default placeholder to prevent errors
-tarType.textContent = "character";                                      // Set a default target type to prevent errors
+const syncTarType = () => { 
+    tarType.textContent = selectBox.value;
+}         
 let percentage = 0;                                                     // Initialize percentage of user's progress
 const update = ()=> {                                                   // Function that renews count and progress bar
     const maxInput = Input.value;                                       // Set target count
@@ -67,7 +69,7 @@ const update = ()=> {                                                   // Funct
 });
 
 selectBox.addEventListener("change", () => {                            // Initialize target count when user changes target type
-    tarType.textContent = selectBox.value;
+    syncTarType();
     if(tarType.textContent === `character`) {
         console.log(`char`);
         Input.value = 140;
@@ -83,11 +85,11 @@ selectBox.addEventListener("change", () => {                            // Initi
     update();
 });
 
+const syncFromForm = () => {
+    syncTarType();
+    update();
+};
+
 window.addEventListener("pageshow", () => {
-    const restore = () => {
-        tarType.textContent = selectBox.value;
-        update();
-    };
-    restore();
-    setTimeout(restore, 0);
-})
+    syncFromForm();
+});
