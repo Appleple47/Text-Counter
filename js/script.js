@@ -9,9 +9,9 @@ const selectBox = document.querySelector("#Type");
 const tarType = document.querySelector("#TarType");
 
 text.placeholder = "Type your sentence here.";                          // Set a default placeholder to prevent errors
-const syncTarType = () => { 
+const syncTarType = () => {
     tarType.textContent = selectBox.value;
-}         
+}
 let percentage = 0;                                                     // Initialize percentage of user's progress
 const update = ()=> {                                                   // Function that renews count and progress bar
     const maxInput = Input.value;                                       // Set target count
