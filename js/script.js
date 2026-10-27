@@ -14,6 +14,7 @@ const syncTarType = () => {
 }
 let percentage = 0;                                                     // Initialize percentage of user's progress
 const update = ()=> {                                                   // Function that renews count and progress bar
+    syncTarType();
     const maxInput = Input.value;                                       // Set target count
     
     const spaces = text.value.match(/ /g);                              // Count characters other than spaces.
